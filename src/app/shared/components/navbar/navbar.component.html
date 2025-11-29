@@ -1,0 +1,57 @@
+<div class="navbar bg-neutral text-neutral-content shadow-sm px-5">
+  <div class="navbar-start">
+    <!-- MOBILE -->
+    <a [href]="'/'">
+      <img
+        class="w-8 block sm:hidden"
+        alt="Mapbox logo Mobile"
+        src="/logo-mapbox-mobile.svg"
+      />
+
+      <!-- DESKTOP -->
+      <img
+        class="w-35 hidden sm:block"
+        alt="Mapbox logo Desktop"
+        src="/logo-mapbox.svg"
+      />
+    </a>
+  </div>
+  <div class="navbar-center">
+    <!-- <a class="btn btn-ghost text-xl">{{ pageTitle$ | async }}</a> -->
+    <div class="text-xl">{{ pageTitle() }}</div>
+  </div>
+
+  <div class="navbar-end">
+    <div class="dropdown dropdown-end">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h7"
+          />
+        </svg>
+      </div>
+      <ul
+        tabindex="0"
+        class="menu menu-sm dropdown-content text-black bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+      >
+        @for (route of routes; track route.path) {
+        <li>
+          <a [routerLink]="route.path">
+            <app-icon [svg]="route.icon" class="fill-gray-600"></app-icon>
+            {{ route.title }}
+          </a>
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</div>

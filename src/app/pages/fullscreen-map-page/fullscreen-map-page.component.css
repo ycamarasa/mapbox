@@ -1,0 +1,27 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.container-map {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+#controls {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  position: fixed;
+  right: 20px;
+  z-index: 9999;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  width: 250px;
+}

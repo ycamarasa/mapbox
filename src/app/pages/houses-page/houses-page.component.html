@@ -1,0 +1,34 @@
+<section class="container mx-auto px-5 sm:px-0">
+  <h2 class="text-3xl font-bold mb-2 mt-10">Propiedades disponibles</h2>
+  <h3 class="text-xl text-gray-500 mb-2">
+    {{ houses().length }} casas disponibles
+  </h3>
+</section>
+
+<section
+  class="container mx-auto mt-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 mb-20"
+>
+  @for (house of houses(); track house.id; let i = $index) {
+  <!-- CARD -->
+  <div class="card bg-base-100 sm:shadow-xl sm:rounded-t-md sm:overflow-hidden">
+    <app-mini-map [lngLat]="house.lngLat" [zoom]="14" />
+
+    <div class="card-body">
+      <h2 class="card-title">
+        {{ house.name }}
+        @if( house.isNew === true) {
+        <div class="badge badge-secondary">NEW</div>
+        }
+      </h2>
+      <p>
+        {{ house.description }}
+      </p>
+      <div class="card-actions justify-end">
+        @for (tag of house.tags; track $index) {
+        <div class="badge badge-outline badge-secondary">{{ tag }}</div>
+        }
+      </div>
+    </div>
+  </div>
+  }
+</section>
