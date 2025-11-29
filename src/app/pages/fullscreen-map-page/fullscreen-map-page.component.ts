@@ -11,7 +11,7 @@ import mapboxgl from 'mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');"
 import { environment } from '../../../environments/environment';
 import { DecimalPipe, JsonPipe } from '@angular/common';
 
-mapboxgl.accessToken = environment.mapboxKey;
+mapboxgl.accessToken = environment.MAPBOX_KEY;
 
 @Component({
   selector: 'app-fullscreen-map-page',

@@ -11,7 +11,7 @@ import { v4 as UuidV4 } from 'uuid';
 import { CommonModule } from '@angular/common';
 import { Marker } from '../../interfaces/map.interface';
 
-mapboxgl.accessToken = environment.mapboxKey;
+mapboxgl.accessToken = environment.MAPBOX_KEY;
 
 @Component({
   selector: 'app-markers-page',

@@ -10,7 +10,7 @@ if (!process.env["MAPBOX_KEY"]) {
 
 const envFileContent = `
 export const environment = {
-  mapboxKey: "${process.env["MAPBOX_KEY"]}",
+  MAPBOX_KEY: "${process.env["MAPBOX_KEY"]}",
 };
 `;
 
