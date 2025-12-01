@@ -2,6 +2,29 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.4.
 
+
+## Launch project in DEV
+
+1. Clone repository
+
+```bash
+git clone https://github.com/nombre_usuario/nombre_proyecto.git
+```
+
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3. Generate the `.env` based on the `.env.template`. This is where you should paste the token that you will generate on the official Mapbox page
+
+4. Run the command to generate the environments folder:
+
+```bash
+npm run set-envs
+```
+
 ## Development server
 
 To start a local development server, run:
@@ -58,23 +81,3 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
-Levantar proyecto en DEV
-
-1. Clonar repositorio
-
-```bash
-git clone https://github.com/nombre_usuario/nombre_proyecto.git
-```
-
-2. Instalar dependencias
-
-```bash
-npm install
-```
-
-3. Generar el `.env` basado en el `.env.template`
-4. Ejecutar el comando para generar carpeta environtments:
-
-```bash
-npm run set-envs
-```
