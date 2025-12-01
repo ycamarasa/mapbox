@@ -17,7 +17,7 @@ git clone https://github.com/nombre_usuario/nombre_proyecto.git
 npm install
 ```
 
-3. Generate the `.env` based on the `.env.template`. This is where you should paste the token that you will generate on the official Mapbox page
+3. Generate the `.env` based on the `.env.template`. This is where you should paste the token that you will generate on the official ![Mapbox page](https://www.mapbox.com/). (The token used for this project only works on the demo URL.) 
 
 4. Run the command to generate the environments folder:
 
