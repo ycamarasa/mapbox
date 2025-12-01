@@ -7,6 +7,7 @@ import { filter, map, tap } from 'rxjs';
 import { routes } from '../../../app.routes';
 import { Title } from '@angular/platform-browser';
 import { IconComponent } from '../../../icons/icon-component';
+import { burgerMenuIcon } from '../../../icons/icon-data';
 
 @Component({
   selector: 'app-navbar',
@@ -16,11 +17,12 @@ import { IconComponent } from '../../../icons/icon-component';
 })
 export class NavbarComponent {
   router = inject(Router); //Esto no es un servicio es un objeto
+  menuBurger = burgerMenuIcon;
 
   routes = routes
     .map((route) => ({
       path: route.path,
-      title: `${route.title ?? 'Maps en Angular'}`,
+      title: `${route.title ?? 'Maps in Angular'}`,
       icon: route.icon,
     }))
     .filter((route) => route.path !== '**');
@@ -31,7 +33,7 @@ export class NavbarComponent {
   //   map((event) => event.url),
   //   map(
   //     (url) =>
-  //       routes.find((route) => `/${route.path}` === url)?.title ?? 'Mapas'
+  //       routes.find((route) => `/${route.path}` === url)?.title ?? 'Maps'
   //   )
   // );
 
@@ -43,9 +45,8 @@ export class NavbarComponent {
       map((event) => event.url),
       map(
         (url) =>
-          routes.find((route) => `/${route.path}` === url)?.title ?? 'Mapas'
+          routes.find((route) => `/${route.path}` === url)?.title ?? ''
       )
     )
   );
-
 }

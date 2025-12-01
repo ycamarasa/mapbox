@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+/* :root {
+  overflow: hidden !important;
+  height: 100vh !important;
+} */
+
 .main {
   display: grid;
   min-height: 100dvh;
@@ -13,4 +18,19 @@ router-outlet {
 
 router-outlet + * {
   height: 100%;
+}
+
+.mapboxgl-ctrl-bottom,
+.mapboxgl-ctrl-bottom-left,
+.mapboxgl-ctrl-bottom-right,
+.mapboxgl-ctrl-left,
+.mapboxgl-ctrl-right,
+.mapboxgl-ctrl-top,
+.mapboxgl-ctrl-top-left,
+.mapboxgl-ctrl-top-right {
+  z-index: 0;
+}
+
+:where(:root:has(.drawer:not(.drawer-open) > .drawer-toggle:checked)) {
+  scrollbar-gutter: inherit;
 }

@@ -30,7 +30,7 @@ export const routes: AppRoute[] = [
   {
     path: 'houses',
     component: HousesPageComponent,
-    title: 'Propiedades disponibles',
+    title: 'Properties available',
     icon: houseIcon,
   },
   {

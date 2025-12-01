@@ -12,59 +12,58 @@ import { HouseProperty } from '../../interfaces/map.interface';
 export class HousesPageComponent {
   houses = signal<HouseProperty[]>([
     {
-      id: uuid(),
-      name: 'Villa Serenidad',
+      id: 'uuid()',
+      name: 'Villa Serenity',
       description:
-        'Un refugio tranquilo con vistas panorámicas al mar y jardines exuberantes.',
-      price: 500_000,
+        'A peaceful retreat with panoramic sea views and lush gardens.',
+      price: 500000,
       lngLat: { lng: -0.861526, lat: 41.65649 },
-      tags: ['Villa', 'Mar', 'Jardines'],
+      tags: ['Villa', 'Sea', 'Gardens'],
       isNew: true,
     },
     {
-      id: uuid(),
-      name: 'Casa del Sol',
+      id: 'uuid()',
+      name: 'House of the Sun',
       description:
-        'Una casa luminosa y acogedora con amplias terrazas y piscina privada.',
-      price: 750_000,
+        'A bright and cozy home with spacious terraces and a private pool.',
+      price: 750000,
       lngLat: { lng: -3.862, lat: 41.657 },
-      tags: ['Casa', 'Sol', 'Terrazas'],
+      tags: ['House', 'Sun', 'Terraces'],
     },
     {
-      id: uuid(),
-      name: 'Residencia Esmeralda',
+      id: 'uuid()',
+      name: 'Emerald Residence',
       description:
-        'Elegante propiedad con acabados de lujo y un diseño arquitectónico moderno.',
-      price: 1_200_000,
+        'Elegant property with luxury finishes and modern architectural design.',
+      price: 1200000,
       lngLat: { lng: 0.69187, lat: 41.647155 },
-      tags: ['Casa', 'Esmeralda', 'Acabados'],
+      tags: ['House', 'Emerald', 'Finishes'],
     },
     {
-      id: uuid(),
+      id: 'uuid()',
       name: 'Loft',
-      description:
-        'Encantador loft cerca del tranquilo parque natural La Mitjana.',
-      price: 950_000,
+      description: 'Charming loft near the peaceful La Mitjana Natural Park.',
+      price: 950000,
       lngLat: { lng: 0.635429, lat: 41.624536 },
-      tags: ['Casa', 'Lago', 'Hacienda'],
+      tags: ['House', 'Lake', 'Estate'],
     },
     {
-      id: uuid(),
-      name: 'Chalet el Bosque',
+      id: 'uuid()',
+      name: 'Forest Chalet',
       description:
-        'Encantadora propiedad rodeada de bosque, con senderos privados y piscina natural.',
-      price: 650_000,
+        'Charming property surrounded by forest, with private trails and a natural pool.',
+      price: 650000,
       lngLat: { lng: -1.45231, lat: 42.66234 },
-      tags: ['Chalet', 'Bosque', 'Piscina'],
+      tags: ['Chalet', 'Forest', 'Pool'],
     },
     {
-      id: uuid(),
-      name: 'Apartamento Horizonte',
+      id: 'uuid()',
+      name: 'Horizon Apartment',
       description:
-        'Moderno apartamento en altura con vistas a la ciudad y acabados contemporáneos.',
-      price: 420_000,
+        'Modern high-rise apartment with city views and contemporary finishes.',
+      price: 420000,
       lngLat: { lng: -0.7412, lat: 46.6495 },
-      tags: ['Apartamento', 'Horizonte', 'Moderno'],
+      tags: ['Apartment', 'Horizon', 'Modern'],
     },
   ]);
 }
